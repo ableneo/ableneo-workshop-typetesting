@@ -1,0 +1,84 @@
+{
+  "root": true,
+  "ignorePatterns": [
+    "projects/**/*"
+  ],
+  "overrides": [
+    {
+      "files": [
+        "*.js"
+      ],
+      "parserOptions": {
+        "ecmaVersion": "latest"
+      },
+      "env": {
+        "es6": true
+      }
+    },
+    {
+      "files": [
+        "*.ts"
+      ],
+      "parserOptions": {
+        "project": [
+          "tsconfig.json"
+        ],
+        "createDefaultProgram": true
+      },
+      "rules": {
+        "prefer-arrow/prefer-arrow-functions": "off",
+        "@typescript-eslint/no-non-null-assertion": "off",
+        "@typescript-eslint/explicit-function-return-type": [
+          "error",
+          {
+            "allowExpressions": true
+          }
+        ],
+        "@typescript-eslint/explicit-member-accessibility": [
+          "error",
+          {
+            "accessibility": "no-public"
+          }
+        ],
+        "@typescript-eslint/member-ordering": [
+          "error",
+          {
+            "default": [
+              // Static fields
+              "private-static-field",
+              "protected-static-field",
+              "public-static-field",
+              // Instance fields and accessors
+              "private-instance-field",
+              "private-instance-get",
+              "private-instance-set",
+              "protected-instance-field",
+              "protected-instance-get",
+              "protected-instance-set",
+              "public-instance-field",
+              "public-instance-get",
+              "public-instance-set",
+              // Static methods
+              "public-static-method",
+              "protected-static-method",
+              "private-static-method",
+              // Constructors
+              "public-constructor",
+              "protected-constructor",
+              "private-constructor",
+              // Instance methods
+              "public-instance-method",
+              "protected-instance-method",
+              "private-instance-method"
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "files": [
+        "*.html"
+      ]
+    }
+  ]
+}
