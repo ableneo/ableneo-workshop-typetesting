@@ -9,7 +9,7 @@
     "baseUrl": "."
   },
   "include": [
-    "./src/**/*.ts"
+    "./**/*.ts",
   ],
   "exclude": [
     "./src/**/*.spec.ts"

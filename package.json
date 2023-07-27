@@ -5,7 +5,9 @@
   "main": "main.ts",
   "scripts": {
     "start": "ts-node main.ts",
-    "test": "npm test"
+    "jest": "jest",
+    "typetest": "tsd -t main.spec-d.ts",
+    "test": "npm run typetest && npm run jest"
   },
   "keywords": [
     "workshop",
@@ -16,6 +18,7 @@
   "author": "Matej Kolečáni",
   "license": "MIT",
   "devDependencies": {
+    "@tsd/typescript": "^5.1.6",
     "@types/jest": "^29.5.3",
     "eslint-config-prettier": "^8.8.0",
     "jest": "^29.6.1",
